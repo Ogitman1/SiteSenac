@@ -52,16 +52,20 @@ body{
     overflow-x: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(68, 68, 255);
+    color: aliceblue;
 }
 ul li{
     font-weight: 600;
     
 }
 img{
-    display: inline-flex;
-    height: 200px;
-    width: 200px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 180px;
+    width: 180px;
     border-radius: 50%;
+    margin-top: 15px;
     
 }
