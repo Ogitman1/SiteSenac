@@ -45,8 +45,10 @@ h2#un{
     justify-content: center;
     align-items: center;
     margin-top: 45px;
-    font-size: 28px;
+    font-size: 34px;
     text-align: center;
+    font-weight: 700;
+    padding: 10px 70px;
 }
 body{
     overflow-x: hidden;
@@ -67,15 +69,40 @@ img{
     width: 180px;
     border-radius: 50%;
     margin-top: 15px;
+    border: 2px solid black;
     
 }
+h3{
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    text-shadow: 2px 0px 3px black;
+    color: rgb(249, 252, 255);
+}
+p{
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 0px 8px black;
+    color: rgb(236, 230, 230);
+}
+
+/*@keyframes example {
+    from {max-height: 180px;
+        width: 180px;}
+    to {max-height: 210px;
+        width: 210px;}
+  }*/
 .carousel-fade .carousel-inner .carousel-item {
-    transition: opacity 1s ease-out;
+    animation-name: example;
+    animation-duration: 2s;
+    transition: opacity 1s ease-in-out;
     opacity: 0;
     left: 0;
     right: 0;
   }
 
   .carousel-fade .carousel-inner .active {
-    opacity: 1;
+    opacity: 1; 
   }
