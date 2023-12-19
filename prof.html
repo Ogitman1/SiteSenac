@@ -10,32 +10,83 @@
 </head>
 <body>
   
-    <div id="navbar">
-        <ul id="list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre o Senac</a></li>
-            <li><a href="#">Professores</a></li>
-        </ul>
-    </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Scrollbar Example</title>
+      <!-- Adicione os estilos do Bootstrap e outros recursos necessários aqui -->
+  </head>
+  <body>
+  
+  <div id="navbar">
+      <ul id="list">
+          <li><a href="#">Senac</a></li>
+          <li><a href="#">Unidades</a></li>
+          <li><a href="#">Eventos</a></li>
+              <div class="d-flex sm align-items-center justify-content-center" style="height: 10vh;">
+                  <button class="btn btn-primary dropdown-toggle mx-auto" 
+                      type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Cursos e graduações
+                  </button>
+                  <ul class="dropdown-menu" style="max-height: 400px; overflow-y: auto; ">
+                      <li><a class="dropdown-item" style="cursor: pointer; font-weight: bold; letter-spacing: 1px;" href="#">TI</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a class="dropdown-item" style="cursor: pointer; font-weight: bold; letter-spacing: 1px;" href="#">Moda</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a class="dropdown-item" style="cursor: pointer; font-weight: bold; letter-spacing: 1px;"href="#">Design, Artes e arquitetura</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Beleza e Estética</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Bem-estar</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Comunicação e Marketing</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Educação</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Gastronomia</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Turismo e Hospitalidade</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Idiomas</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Saúde</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Meio ambiente, Segurança e Saúde no trabalho</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                      <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Gestão e Negócios</a></li>
+                      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+                  </ul>
+              </div>
+          
+      </ul>
+  </div>
+  
+  <!-- Adicione os scripts do Bootstrap e outros recursos necessários aqui -->
+  
+  </body>
+  </html>
+  
     <div id="space">
     <div id="autoplaying" class="carousel slide carousel-fade " style="background-color: #111121; margin: 0; padding: 0; position: static;" data-bs-ride="carousel">
     <h2 id="un">Melhores professores recomendados pelos alunos</h2>
       <div class="carousel-inner">
-        <div class="d-flex .relative carousel-item  active align-items-center justify-content-center" data-bs-interval="3000">
+        <div class="d-flex .relative carousel-item  active align-items-center justify-content-center" data-bs-interval="4000">
           <div class="text-center"> 
           <img onmouseover="Change('Diego')" src="./Sources/Diego.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
           <h3>Diego de Castro Camelo</h3>
           <p>Professor de Artes</p>
           </div>
         </div>
-        <div class="d-flex .relative carousel-item  align-items-center justify-content-center" data-bs-interval = "3000">
+        <div class="d-flex .relative carousel-item  align-items-center justify-content-center" data-bs-interval = "4000">
           <div  class="text-center"> 
-          <img onmouseover="Change('Ale')" src="./Sources/Ale.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
+          <img onmouseover="Change('Ale')" src="./Sources/AlexandreS.jpg" class="d-block mx-auto prof" alt="Professor de artes">
           <h3>Alexandre Serignolli</h3>
           <p>Professor de TI</p>
           </div>
         </div>
-        <div class="d-flex .relative carousel-item  align-items-center justify-content-center" data-bs-interval = "3000">
+        <div class="d-flex .relative carousel-item  align-items-center justify-content-center" data-bs-interval = "4000">
           <div  class="text-center"> 
           <img onmouseover="Change('Renilson')" src="./Sources/Renilson.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
           <h3>Renilson Adriano da Silva</h3>
@@ -98,7 +149,7 @@
     </form>
   </div>
   <footer>
-    <h2 style="flex: 0 0 100%; color: rgb(22, 20, 20); text-shadow: none; margin-top: 9px;">Senac Nações Unidas</h2>
+    <h1 style="flex: 0 0 100%; color: rgb(22, 20, 20); text-shadow: none; margin-top: 9px; font-size: 29px;">Senac Nações Unidas</h1>
     <hr style="color: rgb(25, 26, 27); height: 3px; width: 80%; "> </hr>
     <ul >
       <li>Direção</li>
@@ -144,7 +195,10 @@ if (toastTrigger) {
   </script>
   <!-- Script JS para o popup-->
   <script src="Pop.js"></script>
+  <!-- Script JS para o formulário-->
   <script src="Form.js"></script>
+  <!-- Script JS para os links-->
+  <script src="Mouse.js"></script>
   <!-- Bootstrap JS should be placed after your script -->
   
 </body>
