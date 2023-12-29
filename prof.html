@@ -19,7 +19,12 @@
                       type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Cursos e graduações
                   </button>
-                  <ul class="dropdown-menu" style="max-height: 400px; overflow-y: auto; ">
+                  <div class="dropdown-menu" style="max-height: 400px; overflow-y: auto; width: 481px; overflow-x: hidden;">
+                    <div style="display: flex; justify-content: center; align-items: center ;flex-direction: row;">
+                      <input id="camp" type="text" placeholder="Busque o seu curso" style="display: inline-block;width: 80%; height: 2.2rem; border-radius: 12px ; border-color: 1px solid rgb(29, 26, 26);" >
+                      
+                    </div>
+                    <ul id="dropdown"  style="display: flex; flex-direction: column; text-align: left;">
                       <li><a class="dropdown-item" style="cursor: pointer; font-weight: bold; letter-spacing: 1px;" href="#">Desenvolvimento de Jogos</a></li>
                       <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
                       <li><a class="dropdown-item" style="cursor: pointer; font-weight: bold; letter-spacing: 1px;" href="#">Ciência da Computação</a></li>
@@ -52,54 +57,56 @@
                       <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
                       <li><a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">Gestão e Negócios</a></li>
                       <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
-                  </ul>
+                    </ul>
+                  </div>
               </div>
           
       </ul>
   </div>
   
-  <!-- Adicione os scripts do Bootstrap e outros recursos necessários aqui -->
-  
+  <!-- div#space para por todo o layout da página-->
   <div id="space">
+   
     <div id="mapa" style="display: flex;justify-content: space-between ;width: auto; height: auto; padding: 20px calc(20% + 5px);">
-    <address style="font-size: 17px; padding: 20px 40px;">
+    <!--Pequeno texto falando das unidades do Brasil e botão-->
+      <address style="font-size: 17px; padding: 20px 40px;">
         <h2 style="font-weight: bold; margin-bottom: 20px; ">Unidades presentes em todo país</h2>
-       <p style="text-shadow: 0 1px 2px black; letter-spacing: 0;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo ducimus sunt repudiandae, veritatis rerum totam reiciendis commodi, accusamus in vitae mollitia, illo delectus voluptas dicta necessitatibus itaque obcaecati? Ducimus, atque?</p>
+        <p style="text-shadow: 0 1px 2px black; letter-spacing: 0;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo ducimus sunt repudiandae, veritatis rerum totam reiciendis commodi, accusamus in vitae mollitia, illo delectus voluptas dicta necessitatibus itaque obcaecati? Ducimus, atque?</p>
       </address>
-      
+      <!--Imagem do mapa do Brasil-->
       <img src="./Images/Brasilrm.png" alt="mapa brasil" style="width: 200px; height: auto; border-radius: 0; border: 0;">
-  </div>
-  
-    <div id="autoplaying" class="carousel slide carousel-fade " style=" margin: 0; padding: 0; position: static;" data-bs-ride="carousel">
-    <h2 id="un">Melhores professores recomendados pelos alunos</h2>
-      <div class="carousel-inner">
-        <div class="d-flex carousel-item  active align-items-center justify-content-center" data-bs-interval="4000">
-          <div class="text-center"> 
-          <img onmouseover="Change('Diego')" src="./Sources/Diego.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
-          <h3>Diego de Castro Camelo</h3>
-          <p>Professor de Artes</p>
+    </div>
+  <!--Carrosel dos professores-->
+    <div id="autoplaying" class="carousel slide carousel-fade " style="margin: 0; padding: 0; position: relative;" data-bs-ride="carousel">
+      <h2 id="un">Melhores professores recomendados pelos alunos</h2>
+        <div class="carousel-inner">
+          <div class="d-flex carousel-item  active align-items-center justify-content-center img-fluid" data-bs-interval="4000">
+            <div class="text-center"> 
+            <img onmouseover="Change('Diego')" src="./Sources/Diego.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
+            <h3>Diego de Castro Camelo</h3>
+            <p>Professor de Artes</p>
           </div>
         </div>
         <div class="d-flex carousel-item  align-items-center justify-content-center" data-bs-interval = "4000">
           <div  class="text-center"> 
-          <img onmouseover="Change('Ale')" src="./Sources/AlexandreS.jpg" class="d-block mx-auto prof" alt="Professor de artes">
-          <h3>Alexandre Serignolli</h3>
-          <p>Professor de TI</p>
+            <img onmouseover="Change('Ale')" src="./Sources/AlexandreS.png" class="d-block mx-auto prof" alt="Professor de artes">
+            <h3>Alexandre Serignolli</h3>
+            <p>Professor de TI</p>
           </div>
         </div>
         <div class="d-flex carousel-item  align-items-center justify-content-center" data-bs-interval = "4000">
           <div  class="text-center"> 
-          <img onmouseover="Change('Renilson')" src="./Sources/Renilson.jpeg" class="d-block mx-auto prof" alt="Professor de artes">
+          <img onmouseover="Change('Renilson')" src="./Sources/Renilson.png" class="d-block mx-auto prof" alt="Professor de artes">
           <h3>Renilson Adriano da Silva</h3>
           <p>Professor de Matemática</p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#autoplaying" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#autoplaying" data-bs-slide="prev" style="left: 0; background: none; border: none; position: absolute; top: 50%; transform: translateY(-50%);">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#autoplaying" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#autoplaying" data-bs-slide="next" style="right: 0; background: none; border: none; position: absolute; top: 50%; transform: translateY(-50%);">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -123,15 +130,27 @@
       <p style="color: rgb(29, 26, 26); text-shadow: none; font-weight: 500;
       letter-spacing: 0 ;font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Passe o mouse sobre cada professor para ver uma pequena biografia!</p>
       <span id="text-popup" onclick="fecharPopup()" >Fechar e prosseguir</span>
-  </div>
+    </div>
   <!--Ritual satânico para centralizar uma div -->
   <div style="display: flex; align-items: center; justify-content: center; margin-top: 70px;">
-  <div style="display: inline-flex; justify-content: center;align-items: center ; width: 80%;">
-  <h2 style="letter-spacing: 1px;text-shadow: 0 3px 7px rgb(224, 224, 222) ;
-  background-color: rgb(216, 216, 255);box-shadow: 0 3px 4px #111121; color: #2c2c2c; padding: 5px 30px;">
-  Marque uma visita para conhecer o campus</h2>
+    <div style="display: inline-flex; justify-content: center;align-items: center ; width: 80%;">
+      <h2 style="display: block;letter-spacing: 1px;text-shadow: 0 3px 7px rgb(224, 224, 222) ;margin-bottom: 25px;
+        background-color: rgb(216, 216, 255);box-shadow: 0 3px 4px #111121; color: #2c2c2c; padding: 5px 30px;">
+        Marque uma visita para conhecer o campus
+      </h2>
+  
   </div>
 </div>
+<!--Layout das imagens do senac-->
+<div style="display: flex; justify-content: center;">
+  <div style="display: flex; justify-content: space-evenly; width: 70%; height: max-content;">
+    <img src="./Images/SENAC.jpeg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
+    <img src="./Images/biblioteca.jpg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
+    <img src="./Images/academicos.jpg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
+  </div>
+</div>
+
+<!--forms para cadastro de visita-->
   <div class="container mt-5 px-5-md-px-3-sm-px-3">
     <form id="myForm">
       <div class="mb-3">
@@ -149,6 +168,7 @@
       <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Enviar</button>
     </form>
   </div>
+  <!--Rodapé do site-->
   <footer>
     <h2 style="flex: 0 0 100%; color: rgb(22, 20, 20); text-shadow: none; margin-top: 9px; font-size: 29px;">Senac Nações Unidas</h2>
     <hr style="color: rgb(25, 26, 27); height: 3px; width: 80%; "> </hr>
@@ -159,8 +179,11 @@
     </ul>
   </footer>
 </div>
+<!--Script bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Script primeiro popup-->
     <script src="Pop.js"></script>
+    <!--Script popup professores-->
     <script>
       const toastTrigger = document.querySelectorAll('.prof');
       const toastLiveExample = document.getElementById('liveToast');
@@ -191,15 +214,59 @@ if (toastTrigger) {
   }
 }
 
+//Lógica do campo de busca dos cursos
+// Adicionando um ouvinte de evento ao campo de busca
+document.getElementById("camp").addEventListener("input", function() {
+  Pesquisar();
+});
+
+function Pesquisar() {
+  var list = document.getElementById("dropdown");
+  var listli = list.getElementsByTagName("li");
+  var camp = document.getElementById("camp").value.trim(); // Remova espaços em branco antes e depois do texto
+  var regex = new RegExp(camp, "i");
+  var matchingItems = [];
+
+  // Verificar se o campo de busca está vazio
+  if (camp === "") {
+    // Se estiver vazio, restaurar a lista original
+    list.innerHTML = originalListHTML;
+    return;
+  }
+
+  for (var i = 0; i < listli.length; i++) {
+    var textlilist = listli[i].innerText;
+
+    if (regex.test(textlilist)) {
+      matchingItems.push(textlilist);
+    }
+  }
+
+  var ulContent = "";
+
+  for (var j = 0; j < matchingItems.length; j++) {
+    ulContent += `
+      <li>
+        <a href="#" class="dropdown-item" style="cursor: pointer;font-weight: bold; letter-spacing: 1px;">${matchingItems[j]}</a>
+      </li>
+      <hr style="color: #2c2c2c; height: 2px; width: 85%;  margin-left: 30px;"></hr>
+    `;
+  }
+
+  list.innerHTML = ulContent;
+}
+
+// Armazenar a lista original de itens
+var originalListHTML = document.getElementById("dropdown").innerHTML;
+
   </script>
   <!-- Script JS para o popup-->
   <script src="Pop.js"></script>
   <!-- Script JS para o formulário-->
   <script src="Form.js"></script>
   <!-- Script JS para os links-->
-  <script src="Mouse.js"></script>
-  <!-- Bootstrap JS should be placed after your script -->
-  
+  <script src="Mouseover.js"></script>
+  <!-- Script de busca -->
 </body>
 </html>
 

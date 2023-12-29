@@ -175,23 +175,6 @@ footer{
     z-index: 10000;
     margin-top: 50px;
 }
-.carousel {
-    height: auto; /* Ajuste a altura conforme necessário */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-control-prev {
-    left: 5%;
-}
-
-.carousel-control-next {
-    right: 5%;
-}
 @media screen and (max-width: 789px){
     #mapa{
         height: auto;
