@@ -19,7 +19,7 @@
                       type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Cursos e graduações
                   </button>
-                  <div class="dropdown-menu" style="max-height: 400px; overflow-y: auto; width: 481px; overflow-x: hidden;">
+                  <div class="dropdown-menu" style="max-height: 400px; overflow-y: auto; width: 481px; overflow-x: hidden; z-index: 10000000000000;">
                     <div style="display: flex; justify-content: center; align-items: center ;flex-direction: row;">
                       <input id="camp" type="text" placeholder="Busque o seu curso" style="display: inline-block;width: 80%; height: 2.2rem; border-radius: 12px ; border-color: 1px solid rgb(29, 26, 26);" >
                       
@@ -144,19 +144,21 @@
 <!--Layout das imagens do senac-->
 <div class="container">
   <div class="row position-relative">
-    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white;" class="d-lg-none col-6 position-absolute top-50 start-0" id="prevBtn" onclick="prevSlide()">❮</button>
+    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white; z-index: 1000;" class="d-xl-none col-6 position-absolute top-50 start-0" id="prevBtn" onclick="prevSlide()">❮</button>
 
-    <div id="menu" class="d-flex justify-content-around col-sm-12 col-md-8 overflow-hidden col-xl-12" style="display: flex; width: 100%; max-width: 1200px;">
+    <div id="menu" class="d-flex justify-content-around col-sm-12 col-md-8 overflow-hidden col-xl-12" style="display: flex; width: 100%; max-width: 1700px;">
       <div id="carouselContainer" style="display: flex; transition: transform 0.5s ease;">
-        <img src="./Images/SENAC.jpeg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
-        <img src="./Images/biblioteca.jpg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
-        <img src="./Images/academicos.jpg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/SENAC.jpeg" class="d-inline-flex img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/biblioteca.jpg" class="d-inline-flex img-fluid" alt="biblioteca senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/praça.jpeg" class="d-inline-flex img-fluid" alt="praça senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/sala.jpeg" class="d-inline-flex img-fluid" alt="sala de TI senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
       </div>
     </div>
     
-    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white;" class="d-lg-none col-6 position-absolute top-50 end-0" id="nextBtn" onclick="nextSlide()">❯</button>
+    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white; " class="d-xl-none col-6 position-absolute top-50 end-0" id="nextBtn" onclick="nextSlide()">❯</button>
   </div>
 </div>
+
 
 
 
@@ -271,6 +273,25 @@ function Pesquisar() {
 // Armazenar a lista original de itens
 var originalListHTML = document.getElementById("dropdown").innerHTML;
 
+//Código do carrossel de imagens do Senac
+let currentIndex = 0;
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + 4) % 4; // 4 é o número de slides
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % 4; // 4 é o número de slides
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const carouselContainer = document.getElementById("carouselContainer");
+    const itemWidth = carouselContainer.children[1].offsetWidth;
+    const transformValue = -currentIndex * itemWidth + "px";
+    carouselContainer.style.transform = "translateX(" + transformValue + ")";
+  }
   </script>
   <!-- Script JS para o popup-->
   <script src="Pop.js"></script>
