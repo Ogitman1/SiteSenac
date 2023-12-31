@@ -142,13 +142,25 @@
   </div>
 </div>
 <!--Layout das imagens do senac-->
-<div style="display: flex; justify-content: center;">
-  <div style="display: flex; justify-content: space-evenly; width: 70%; height: max-content;">
-    <img src="./Images/SENAC.jpeg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
-    <img src="./Images/biblioteca.jpg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
-    <img src="./Images/academicos.jpg" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 400px; height: 600px;">
+<div class="container">
+  <div class="row position-relative">
+    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white;" class="d-lg-none col-6 position-absolute top-50 start-0" id="prevBtn" onclick="prevSlide()">❮</button>
+
+    <div id="menu" class="d-flex justify-content-around col-sm-12 col-md-8 overflow-hidden col-xl-12" style="display: flex; width: 100%; max-width: 1200px;">
+      <div id="carouselContainer" style="display: flex; transition: transform 0.5s ease;">
+        <img src="./Images/SENAC.jpeg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/biblioteca.jpg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+        <img src="./Images/academicos.jpg" class="img-fluid" alt="Campus senac" style="border-radius: 9px; border-color: transparent; width: 300px; height: 300px;">
+      </div>
+    </div>
+    
+    <button style="background-color: transparent; border-color: transparent; color: black; font-size: 25px; text-shadow: 0 4px 4px white;" class="d-lg-none col-6 position-absolute top-50 end-0" id="nextBtn" onclick="nextSlide()">❯</button>
   </div>
 </div>
+
+
+
+
 
 <!--forms para cadastro de visita-->
   <div class="container mt-5 px-5-md-px-3-sm-px-3">
