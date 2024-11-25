@@ -212,4 +212,11 @@ footer{
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
+    #liveToast{
+        position: relative;
+        top: 3%;
+        right: -23%;
+        height: auto;
+        width: 250px;
+    }
 }
